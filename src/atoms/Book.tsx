@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  title: string;
-  status: string;
-  img: string;
+interface IProps {
+  title?: string;
+  status?: string;
+  img?: string;
 }
-class Book extends React.Component<Props> {
-  componentDidMount() {}
+interface IState {}
 
+class Book extends React.Component<IProps, IState> {
   render() {
     return (
       <BookContainer status={this.props.status}>
@@ -26,7 +26,8 @@ const BookContainer = styled.div`
   width: 150px;
   height: 220px;
   position: relative;
-  background: ${props => (props.status === "貸出中" ? "black" : "white")};
+  background: ${(props: IProps) =>
+    props.status === "貸出中" ? "black" : "white"};
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
   overflow: hidden;
