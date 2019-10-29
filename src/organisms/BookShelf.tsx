@@ -63,7 +63,7 @@ class BookShelf extends React.Component<IProps, IState> {
 
   render() {
     const items = this.state.books.map((book: IBook) => (
-      <div style={{ padding: "30px", display: "inline-block" }}>
+      <div key={book.id} style={{ padding: "30px", display: "inline-block" }}>
         <Book img={book.imageUrl} title={book.title} status={book.status} />
       </div>
     ));
