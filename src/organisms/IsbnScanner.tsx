@@ -56,6 +56,7 @@ class IsbnScanner extends React.Component<IProps, IState> {
     try {
       const b = (await isbn.resolve(this.state.isbn)) as IIsbnResolve;
       console.log(b);
+      console.log(this.state.isbn);
       this.setState({
         authors: b.authors,
         canonicalVolumeLink: b.canonicalVolumeLink,
@@ -95,6 +96,9 @@ class IsbnScanner extends React.Component<IProps, IState> {
 
   handleChange = (event: { target: { value: any } }) => {
     this.setState({ isbn: event.target.value });
+  };
+
+  handleClick = () => {
     this.fetchIsbnInfo(); // 入力されてすぐにAPI投げるのはちょっと・・・
   };
 
@@ -110,7 +114,15 @@ class IsbnScanner extends React.Component<IProps, IState> {
               value={this.state.isbn}
               onChange={this.handleChange}
             />
+            <button
+              onClick={() => {
+                this.handleClick();
+              }}
+            >
+              CLICK IT !!
+            </button>
           </li>
+
           <li>{this.state.authors}</li>
           <li>{this.state.canonicalVolumeLink}</li>
           <li>{this.state.contentVersion}</li>
