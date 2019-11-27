@@ -1,4 +1,5 @@
 import React from "react";
+import Book from "../atoms/Book";
 var isbn = require("node-isbn");
 
 interface IProps {}
@@ -8,6 +9,7 @@ interface IState {
   authors: string[];
   canonicalVolumeLink: string;
   contentVersion: string;
+  imageLinks: string;
   description: string;
   infoLink: string;
   language: string;
@@ -61,6 +63,7 @@ class IsbnScanner extends React.Component<IProps, IState> {
         authors: b.authors,
         canonicalVolumeLink: b.canonicalVolumeLink,
         contentVersion: b.contentVersion,
+        imageLinks: b.imageLinks.thumbnail,
         description: b.description,
         infoLink: b.infoLink,
         language: b.language,
@@ -83,6 +86,7 @@ class IsbnScanner extends React.Component<IProps, IState> {
     authors: [],
     canonicalVolumeLink: "",
     contentVersion: "",
+    imageLinks: "",
     description: "",
     infoLink: "",
     language: "",
@@ -105,6 +109,7 @@ class IsbnScanner extends React.Component<IProps, IState> {
   render() {
     return (
       <div>
+        <Book title={this.state.title} img={this.state.imageLinks} />
         <ul>
           <li>
             ISBN CODE:{" "}
@@ -122,7 +127,6 @@ class IsbnScanner extends React.Component<IProps, IState> {
               CLICK IT !!
             </button>
           </li>
-
           <li>{this.state.authors}</li>
           <li>{this.state.canonicalVolumeLink}</li>
           <li>{this.state.contentVersion}</li>

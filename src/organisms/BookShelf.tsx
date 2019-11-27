@@ -1,5 +1,6 @@
 import React from "react";
 import Book from "../atoms/Book";
+import fetchBooks from "../action/fetchBooksMock";
 
 interface IBook {
   id?: string;
@@ -15,51 +16,28 @@ interface IState {
 }
 
 class BookShelf extends React.Component<IProps, IState> {
-  /**
-   * APIでBooksの一覧を取得する
-   */
-  fetchBooks = async () => {
-    // try {
-    //   const response = await fetch("http://localhost:3333/books");
-    //   const responseJson = await response.json();
-    //   this.setState({
-    //     books: responseJson.books
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
-    this.setState({
-      books: [
-        {
-          id: "123456789",
-          title: "web api the good parts",
-          imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/51GHwTNJgSL._SX389_BO1,204,203,200_.jpg",
-          status: "貸出中"
-        },
-        {
-          id: "vcd67uiklp098uyh",
-          title: "デザインパターン",
-          imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/51QsmvkObML._SX392_BO1,204,203,200_.jpg"
-        },
-        {
-          id: "nfrtyu87tghnhji",
-          title: "WebDBPress",
-          imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/51Y3LfVnduL._SX352_BO1,204,203,200_.jpg"
-        }
-      ]
-    });
-  };
+  _isMounted = false;
 
-  componentDidMount() {
-    return this.fetchBooks();
+  constructor(props: Readonly<IProps>) {
+    super(props);
+    this.state = {
+      books: []
+    };
   }
 
-  state = {
-    books: []
-  };
+  async componentDidMount() {
+    this._isMounted = true;
+    const books = await fetchBooks();
+    if (this._isMounted) {
+      this.setState({
+        books: books
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
   render() {
     const items = this.state.books.map((book: IBook) => (
