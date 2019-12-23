@@ -6,7 +6,7 @@ const App: React.FC = () => {
   return (
     <div>
       <BookShelf />
-      <IsbnScanner />
+      {/* <IsbnScanner /> */}
     </div>
   );
 };
