@@ -1,6 +1,6 @@
 import React from "react";
 import Book from "../atoms/Book";
-import fetchBooks from "../action/fetchBooksMock";
+import fetchBooks from "../../apis/fetchBooksMock";
 
 interface IBook {
   id?: string;
