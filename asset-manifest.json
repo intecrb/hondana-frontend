@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/hondana-frontend/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/hondana-frontend/static/js/main.b2c280dd.chunk.js",
-    "main.js.map": "/hondana-frontend/static/js/main.b2c280dd.chunk.js.map",
+    "main.js": "/hondana-frontend/static/js/main.cee5e53a.chunk.js",
+    "main.js.map": "/hondana-frontend/static/js/main.cee5e53a.chunk.js.map",
     "runtime-main.js": "/hondana-frontend/static/js/runtime-main.2f96c157.js",
     "runtime-main.js.map": "/hondana-frontend/static/js/runtime-main.2f96c157.js.map",
-    "static/js/2.ee87d5d2.chunk.js": "/hondana-frontend/static/js/2.ee87d5d2.chunk.js",
-    "static/js/2.ee87d5d2.chunk.js.map": "/hondana-frontend/static/js/2.ee87d5d2.chunk.js.map",
+    "static/js/2.9e973bac.chunk.js": "/hondana-frontend/static/js/2.9e973bac.chunk.js",
+    "static/js/2.9e973bac.chunk.js.map": "/hondana-frontend/static/js/2.9e973bac.chunk.js.map",
     "index.html": "/hondana-frontend/index.html",
-    "precache-manifest.5e1841e52f9472f7056f24e21ee5185b.js": "/hondana-frontend/precache-manifest.5e1841e52f9472f7056f24e21ee5185b.js",
+    "precache-manifest.08603ec1d40f3419f020079dea0ad06d.js": "/hondana-frontend/precache-manifest.08603ec1d40f3419f020079dea0ad06d.js",
     "service-worker.js": "/hondana-frontend/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/hondana-frontend/static/css/main.5ecd60fb.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.2f96c157.js",
-    "static/js/2.ee87d5d2.chunk.js",
+    "static/js/2.9e973bac.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.b2c280dd.chunk.js"
+    "static/js/main.cee5e53a.chunk.js"
   ]
 }
