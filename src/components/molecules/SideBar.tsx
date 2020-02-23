@@ -2,7 +2,7 @@ import React from "react";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { SideMenuIcons } from "./SideMenuIcons";
-import { Drawer, IconButton } from "@material-ui/core";
+import { Drawer, IconButton, Divider } from "@material-ui/core";
 
 import clsx from "clsx";
 import {
@@ -90,7 +90,9 @@ export default function SideBar() {
           )}
         </IconButton>
       </div>
+      <Divider />
       <SideMenuIcons />
+      <Divider />
     </Drawer>
   );
 }
