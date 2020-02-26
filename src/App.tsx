@@ -1,5 +1,5 @@
 import React from "react";
-import BookShelf from "./components/organisms/BookShelf";
+import MainBox from "./components/organisms/MainBox";
 import Header from "./components/organisms/Header";
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
 // import IsbnScanner from "./organisms/IsbnScanner";
@@ -17,7 +17,7 @@ const App: React.FC = () => {
   return (
     <div className={classes.root}>
       <Header />
-      <BookShelf />
+      <MainBox />
       {/* <IsbnScanner /> */}
     </div>
   );
