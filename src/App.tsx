@@ -1,15 +1,23 @@
 import React from "react";
-import BookShelf from "./organisms/BookShelf";
+import MainBox from "./components/organisms/MainBox";
+import Header from "./components/organisms/Header";
+import { createStyles, makeStyles, Theme } from "@material-ui/core";
 // import IsbnScanner from "./organisms/IsbnScanner";
-import Button from '@material-ui/core/Button';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      display: "flex"
+    }
+  })
+);
 const App: React.FC = () => {
+  const classes = useStyles();
+
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
-      <BookShelf />
+    <div className={classes.root}>
+      <Header />
+      <MainBox />
       {/* <IsbnScanner /> */}
     </div>
   );
