@@ -8,6 +8,8 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { OPEN } from "../../redux/actions/counterActions";
 
+import { Link } from "react-router-dom";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -73,7 +75,9 @@ export default function HeaderBar() {
           <MenuIcon style={{ color: "white" }} />
         </IconButton>
         <IconButton edge="start" color="inherit" aria-label="menu">
-          <HomeIcon style={{ color: "white" }} />
+          <Link to="/">
+            <HomeIcon style={{ color: "white" }} />
+          </Link>
         </IconButton>
         <Button color="inherit">Login</Button>
       </Toolbar>
