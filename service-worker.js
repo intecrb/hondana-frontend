@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hondana-frontend/precache-manifest.6bc783c2ff270a92dbaa546e5c874558.js"
+  "/hondana-frontend/precache-manifest.0146f734e574f6fc528ee7661e810a84.js"
 );
 
 self.addEventListener('message', (event) => {

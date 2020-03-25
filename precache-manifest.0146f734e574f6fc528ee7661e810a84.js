@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5c99ad6686f5df5496879f0ee11f00c3",
+    "revision": "9c79d29c04ce400b0d5aaf272f6dc487",
     "url": "/hondana-frontend/index.html"
   },
   {
-    "revision": "4cd7f41cc2c6246eee3f",
+    "revision": "e317a9f7b4cc079de5d0",
     "url": "/hondana-frontend/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "ccb9f7f385ea83bda045",
-    "url": "/hondana-frontend/static/js/2.3082a627.chunk.js"
+    "revision": "56479da6785a7654a87d",
+    "url": "/hondana-frontend/static/js/2.fb1a365e.chunk.js"
   },
   {
-    "revision": "4cd7f41cc2c6246eee3f",
-    "url": "/hondana-frontend/static/js/main.d2931a85.chunk.js"
+    "revision": "e317a9f7b4cc079de5d0",
+    "url": "/hondana-frontend/static/js/main.d8d96693.chunk.js"
   },
   {
     "revision": "fae209871088131d7903",
