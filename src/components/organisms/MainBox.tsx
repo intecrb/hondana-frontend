@@ -4,7 +4,8 @@ import clsx from "clsx";
 import { useSelector } from "react-redux";
 import BookShelf from "./BookShelf";
 import { Switch, Route } from "react-router-dom";
-import { LoginPage, PrivateRoute } from "./LoginPage";
+import { LoginPage } from "./LoginPage";
+import { PrivateRoute } from "./PrivateRoute";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

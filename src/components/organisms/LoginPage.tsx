@@ -1,47 +1,16 @@
 import React from "react";
-import { useLocation, useHistory, Route, Redirect } from "react-router-dom";
-
-const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb: any) {
-    fakeAuth.isAuthenticated = true;
-    setTimeout(cb, 100); // fake async
-  },
-  signout(cb: any) {
-    fakeAuth.isAuthenticated = false;
-    setTimeout(cb, 100);
-  }
-};
-
-// screen if you're not yet authenticated.
-export function PrivateRoute({ children, ...rest }: any) {
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        fakeAuth.isAuthenticated ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { AUTHENTICATE } from "../../redux/actions/authenticateAction";
 
 export function LoginPage() {
-  let history = useHistory();
-  let location = useLocation();
-  let { from }: any = location.state || { from: { pathname: "/" } };
-  let login = () => {
-    fakeAuth.authenticate(() => {
-      history.replace(from);
-    });
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  const { from }: any = history.location.state || { from: { pathname: "/" } };
+  const login = () => {
+    dispatch({ type: AUTHENTICATE });
+    history.replace(from);
   };
   return (
     <div>
