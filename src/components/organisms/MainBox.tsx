@@ -43,10 +43,6 @@ function MainBox() {
           <LoginPage />
         </Route>
 
-        <PrivateRoute path="/protected">
-          <h3>Protected</h3>
-        </PrivateRoute>
-
         <Route path="/">
           <div>root</div>
         </Route>
