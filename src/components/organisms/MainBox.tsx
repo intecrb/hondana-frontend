@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { useSelector } from "react-redux";
 import BookShelf from "./BookShelf";
 import { Switch, Route } from "react-router-dom";
+import { LoginPage } from "./LoginPage";
+import { PrivateRoute } from "./PrivateRoute";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,9 +35,16 @@ function MainBox() {
   return (
     <div className={css}>
       <Switch>
-        <Route path="/books" component={BookShelf} />
+        <PrivateRoute path="/books">
+          <BookShelf />
+        </PrivateRoute>
+
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+
         <Route path="/">
-          <div style={{ padding: 100 }}>Hey there this is Home!</div>
+          <div>root</div>
         </Route>
       </Switch>
     </div>

@@ -10,14 +10,14 @@ import { Link } from "react-router-dom";
 export const SideMenuIcons: React.FC = () => {
   return (
     <List>
-      <ListItem button key={"Books"}>
-        <ListItemIcon>
-          <Link to="/books">
+      <Link to="/books">
+        <ListItem button key={"Books"}>
+          <ListItemIcon>
             <ImportContactsIcon />
-          </Link>
-        </ListItemIcon>
-        <ListItemText primary={"Books"} />
-      </ListItem>
+          </ListItemIcon>
+          <ListItemText primary={"Books"} />
+        </ListItem>
+      </Link>
     </List>
   );
 };
